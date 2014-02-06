@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>CSRF</title>
+</head>
+<body>
+<h1>CSRF Prevention</h1>
+<% if @posted %>
+  <h2>You posted: <%= @posted %></h2>
+<% end %>
+
+<form action="/hello" method="post">
+  <input type="text" name="payload" />
+  <input type="submit" />
+</form>
+</body>
+</html>
